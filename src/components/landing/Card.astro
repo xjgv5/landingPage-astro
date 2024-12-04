@@ -1,9 +1,20 @@
+---
+interface Props {
+    title: String;
+}
+
+const { title } = Astro.props;
+---
+
 <div class="card text-center">
     <img src="astro-logo-color.png" class="card__image w-20 m-auto" alt="" />
-    <p class="mt-4 text-red-700 font-bold">Dev Management</p>
+    <h3 class="card__title mt-4 text-red-700 font-bold">{title}</h3>
 </div>
 
 <style>
+    .card__title {
+        color: #b3093e;
+    }
     .card__image {
         filter: opacity(0.2);
         filter: saturate(0);
